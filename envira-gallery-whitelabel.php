@@ -63,3 +63,24 @@ function envira_gallery_whitelabel_css() {
   <?php
 }
 add_action( 'admin_head', 'envira_gallery_whitelabel_css' );
+
+// Enable menu ordering
+add_filter( 'custom_menu_order', '__return_true' );
+/**
+ * Change the menu order, the JetPack way.
+ *
+ * @since 1.0.0
+ * @param array $menu_order
+ * @return array
+ */
+function ja_menu_order( $menu_order ) {
+	$new_menu_order = array();
+	foreach ( $menu_order as $index => $item ) {
+		if ( $item != 'edit.php?post_type=envira' )
+			$new_menu_order[] = $item;
+		if ( $index == 21 )
+			$new_menu_order[] = 'edit.php?post_type=envira';
+	}
+	return $new_menu_order;
+}
+add_filter( 'menu_order', 'ja_menu_order' );
