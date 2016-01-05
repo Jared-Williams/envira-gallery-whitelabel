@@ -13,7 +13,7 @@
  * Plugin Name:       Envira Gallery Whitelabel
  * Plugin URI:        https://github.com/Jared-Williams/envira-gallery-whitelabel
  * Description:       Basically just white labels the plugin to a general Gallery.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Author:            Jared Williams
  * Author URI:        http://www.mediacrazed.com
  * Text Domain:       envira-gallery-whitelabel
