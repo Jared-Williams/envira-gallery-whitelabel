@@ -48,3 +48,18 @@ function tgm_envira_whitelabel( $translated_text, $source_text, $domain ) {
     return $translated_text;
     
 }
+
+/**
+ * Adds the necessary CSS to the admin head to replace the Envira Gallery menu icon with a dashicon.
+ */
+function envira_gallery_whitelabel_css() {
+  ?>
+
+  <style>
+    .menu-top.menu-icon-envira img { display: none; }
+    .menu-top.menu-icon-envira > .dashicons-before:before { content: "\f161"; }
+  </style>
+
+  <?php
+}
+add_action( 'admin_head', 'envira_gallery_whitelabel_css' );
